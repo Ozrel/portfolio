@@ -1,0 +1,364 @@
+:root {
+  --cozy-white: #effaf6;
+  --cozy-blue: #1d6d86;
+  --cozy-black: #0c0c0d;
+  --cozy-gray: #a0a1a1;
+  --cozy-yellow: #fed361;
+  --cozy-orange: #6c3510;
+  --cozy-blue2: #4ebeef;
+  --cozy-green: #5dca36;
+  --cozy-orange2: #af8536;
+  --cozy-red: #ff4244;
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  white-space: normal;
+  font-stretch: normal;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+
+body {
+  text-align: center;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  padding-right: 40px;
+  background-color: var(--cozy-black);
+}
+.nav-container {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 250px;
+} 
+  
+.navbar {
+  position:fixed;
+  background: var(--cozy-red);
+  border-radius: 12px;
+  border-style: outset;
+  top: 15px;
+  padding: 0px;
+  overflow: hidden;
+  border-color: var(--cozy-yellow);
+  z-index: 1;
+}
+
+.nav-list {
+  margin: 0px;
+  position: relative;
+  list-style: none;
+  text-decoration: none;
+  padding-left: 2px;
+  padding-right: 0px;
+  font-weight: bold;
+  font-size: 25px;
+  align-content:space-between;
+  display: flex;
+}
+
+.inside-link {
+  font-family: Garamond, serif;
+  text-decoration: none;
+  color: var(--cozy-white);
+  padding-top: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 1px;
+}
+
+.inside-link:hover {
+  color: var(--cozy-yellow);
+  border-radius: 12px;
+}
+
+.inside-link:active {
+  color: var(--cozy-green);
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(18deg, var(--cozy-white) 60%, var(--cozy-red) 40%);
+  border-radius: 20px;
+  margin-bottom: 35px;
+}
+
+.title {
+  animation: color-animation 4s linear infinite;
+}
+
+.firstword {
+  --color-1: #01a72b;
+  --color-2: #ff4244;
+  --color-3: #4ebeef;
+}
+
+.secondword {
+  --color-1: #ff4244;
+  --color-2: #4ebeef;;
+  --color-3: #01a72b;
+}
+
+.thirdword {
+  --color-1: #4ebeef;
+  --color-2: #01a72b;
+  --color-3: #ff4244;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+.mytitle {
+  font-family: 'Courier New', monospace;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 75px;
+  color: var(--cozy-black);
+  white-space: wrap;
+}
+
+.myjob{
+  font-family: Garamond, serif;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(18deg, var(--cozy-blue2) 60%, var(--cozy-red) 40%);
+  border-radius: 20px;
+  margin-bottom: 35px;
+}
+
+.projects-section-header {
+  font-family: Garamond, serif;
+  color: var(--cozy-white);
+  font-size: 3.0rem;
+  max-width: fit-content;
+  border: 4px;
+  border-style: solid;
+  border-color: var(--cozy-red);
+  border-radius: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 20px;
+  background-color: var(--cozy-black);
+}
+
+.project {
+  text-decoration: none;
+}
+
+.project-title {
+  font-size: x-large;
+  font-weight: 700;
+  color: var(--cozy-white)
+}
+
+.project-title:hover {
+  color: var(--cozy-green);
+}
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(18deg, var(--cozy-white) 60%, var(--cozy-red) 40%);
+  border-radius: 20px;
+}
+
+img {
+  width: 800px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.screen-size {
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+h2 {
+  font-family: 'Courier New', monospace;
+}
+.contact-section a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: large;
+  padding: 12px;
+}
+
+.contact-section a {
+  text-decoration: none;
+  color: var(--cozy-red);
+}
+
+.contact-section a:hover {
+  font-size: larger;
+  color: var(--cozy-blue);
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.gallery::after {
+  content: "";
+  max-width: 400px;
+}
+
+img {
+  --g: 4px;     /* the gap */
+  --b: 4px;    /* border thickness*/
+  --c: var(--cozy-black); /* the color */
+  
+  
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: .3s;
+}
+img:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    background-color: var(--cozy-blue);
+    padding: 10px;
+  }
+
+  .project-title {
+    margin-bottom: 40px;
+  }
+
+  img {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 14px;
+    max-width: 300px;
+    height: 250px;
+  }
+
+  .contact-links {
+    position: relative;
+    display: block;
+  }
+
+  .contact-heading {
+    background-color: var(--cozy-red);
+    color: var(--cozy-white);
+    border-color: var(--cozy-white);
+    border-style: solid;
+    border-radius: 12px;
+    height: auto;
+    width: 100%;
+    padding: 5px;
+  }
+
+  h2 {
+    font-family: Garamond, serif;
+  }
+}
